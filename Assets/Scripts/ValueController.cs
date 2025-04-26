@@ -49,4 +49,16 @@ public class ValueController : MonoBehaviour
         if (data.believers >= maxBelievers) data.believers = maxBelievers;
         if (data.discoverability >= maxDiscoverability) data.discoverability = maxDiscoverability;
     }
+
+    public bool IsBadEnding()
+    {
+        return data.discoverability >= maxDiscoverability;
+    }
+
+    public bool IsGoodEnding()
+    {
+        return data.funds >= maxFunds 
+            && data.authority >= maxAuthority
+            && data.believers >= maxBelievers;
+    }
 }
