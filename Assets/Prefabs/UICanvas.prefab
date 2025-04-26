@@ -297,7 +297,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 1
-  m_FillAmount: 0.613
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -562,9 +562,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3f173c1bfbca9848b0adcd63737b664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _btnGroup: {fileID: 1856139950296529957}
-  _btnPrefab: {fileID: 8715465788469682821, guid: 5d0192e3e04e8bf438fbf9a163bc4a2c, type: 3}
-  _btnNumber: 3
+  valueController: {fileID: 0}
+  btnGroup: {fileID: 1856139950296529957}
+  btnPrefab: {fileID: 8715465788469682821, guid: 5d0192e3e04e8bf438fbf9a163bc4a2c, type: 3}
 --- !u!1 &2140461099300748000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1677,7 +1677,7 @@ GameObject:
   - component: {fileID: 5770841239369552540}
   - component: {fileID: 1664995676193887645}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: QText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1849,7 +1849,7 @@ GameObject:
   - component: {fileID: 6812115464081182881}
   - component: {fileID: 8682821621345990397}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TitleText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
