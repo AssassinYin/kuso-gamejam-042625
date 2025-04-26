@@ -461,7 +461,7 @@ MonoBehaviour:
   _btnGroup: {fileID: 1566383594}
   _btnPrefab: {fileID: 3014481951046383135, guid: ba02ead29d4ef534ca17d98fd4b5971c, type: 3}
   _btnNumber: 3
-  _pos: {x: 0, y: 0}
+  _pos: {x: 0, y: 10}
 --- !u!1 &1665457145
 GameObject:
   m_ObjectHideFlags: 0
