@@ -8,6 +8,7 @@ using UnityEngine.UIElements;
 public class ButtonController : MonoBehaviour
 {
     [SerializeField] private ValueController valueController;
+    [SerializeField] private DateUpdater dateUpdater;
     [SerializeField] private GameObject btnGroup;
     [SerializeField] private GameObject btnPrefab;
 
@@ -17,7 +18,7 @@ public class ButtonController : MonoBehaviour
     {
         foreach (var btn in _buttons)
         {
-            btn.GetComponent<ButtonCallback>().OnClick -= valueController.SetEffectData;
+            UnbindClickEvents(btn);
             Destroy(btn);
         }
         _buttons.Clear();
@@ -32,9 +33,22 @@ public class ButtonController : MonoBehaviour
         {
             GameObject btn = Instantiate(btnPrefab, btnGroup.transform);
             btn.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = choiceDatas[i].text;
-            btn.AddComponent<ButtonCallback>().OnClick += valueController.SetEffectData;
+            btn.AddComponent<ButtonCallback>();
+            BindClickEvents(btn);
             _buttons.Add(btn);
         }
+    }
+
+    private void BindClickEvents(GameObject obj)
+    {
+        obj.GetComponent<ButtonCallback>().OnClick += valueController.SetEffectData;
+        obj.GetComponent<ButtonCallback>().OnClick += dateUpdater.AddDate;
+    }
+
+    private void UnbindClickEvents(GameObject obj)
+    {
+        obj.GetComponent<ButtonCallback>().OnClick -= valueController.SetEffectData;
+        obj.GetComponent<ButtonCallback>().OnClick -= dateUpdater.AddDate;
     }
 
     public List<ButtonCallback> GetBtnCallbacks()
