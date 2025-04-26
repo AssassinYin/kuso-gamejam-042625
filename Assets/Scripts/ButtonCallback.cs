@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class ButtonCallback : MonoBehaviour
 {
     public Action<EffectData> OnClick;
-    public ChoiceData ChoiceData { get => _choiceData; set => _choiceData = value; }
+    public ChoiceData ChoiceData { set => _choiceData = value; }
     
     private ChoiceData _choiceData;
     private Button _button;
