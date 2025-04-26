@@ -46,6 +46,6 @@ public class DateHandler : MonoBehaviour
             month += 12;
         }
 
-        return years + "/" + month;
+        return years.ToString("00") + "/" + month.ToString("00");
     }
 }
