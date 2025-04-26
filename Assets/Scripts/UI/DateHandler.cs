@@ -39,6 +39,13 @@ public class DateHandler : MonoBehaviour
     {
         int years = _dt.Year - _oriDate.Year;
         int month = _dt.Month - _oriDate.Month;
+
+        if (month < 0)
+        {
+            years -= 1;
+            month += 12;
+        }
+
         return years + "/" + month;
     }
 }
