@@ -17,7 +17,8 @@ public class ButtonCallback : MonoBehaviour
 
     private void OnEnable()
     {
-        _button.onClick.AddListener(() => OnClick(_choiceData.effect));
+        //_button.onClick.AddListener(() => OnClick(_choiceData.effect));
+        _button.onClick.AddListener(() => ValueController.instance.SetEffectData(_choiceData.effect));
     }
     
     private void OnDisable()
