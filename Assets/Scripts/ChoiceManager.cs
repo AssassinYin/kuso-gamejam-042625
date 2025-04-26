@@ -18,10 +18,6 @@ public class ChoiceManager : MonoBehaviour
     public void Awake()
     {
         _cardDatabase = JsonConvert.DeserializeObject<List<CardData>>(File.ReadAllText(JsonFileName));
-        foreach (var card in _cardDatabase)
-        {
-            Debug.Log(card.choices[0].text + " " + card.choices[1].text + " " + card.choices[2].text);
-        }
         GetNewChoice();
     }
 

@@ -260,17 +260,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &822957611 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1856139950296529957, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
-  m_PrefabInstance: {fileID: 979270116}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &822957613 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8332288816187461601, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
   m_PrefabInstance: {fileID: 979270116}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822957611}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3f173c1bfbca9848b0adcd63737b664, type: 3}
@@ -472,18 +467,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7113615485757245066, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
-      propertyPath: m_Name
-      value: TitleText (TMP)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8332288816187461601, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
-      propertyPath: btnGroup
-      value: 
-      objectReference: {fileID: 822957611}
-    - target: {fileID: 8332288816187461601, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
-      propertyPath: btnPrefab
-      value: 
-      objectReference: {fileID: 8715465788469682821, guid: 5d0192e3e04e8bf438fbf9a163bc4a2c, type: 3}
     - target: {fileID: 8332288816187461601, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
       propertyPath: valueController
       value: 
