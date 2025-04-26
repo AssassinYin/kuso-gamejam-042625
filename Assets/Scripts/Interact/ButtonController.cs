@@ -11,10 +11,11 @@ public class ButtonController : MonoBehaviour
     [SerializeField] private GameObject btnGroup;
     [SerializeField] private GameObject btnPrefab;
 
-    private List<GameObject> _buttons = new List<GameObject>();
+    private List<GameObject> _buttons;
 
     private void btnInit()
     {
+        _buttons = new List<GameObject>();
         foreach (var btn in _buttons)
         {
             btn.GetComponent<ButtonCallback>().OnClick -= valueController.SetEffectData;
