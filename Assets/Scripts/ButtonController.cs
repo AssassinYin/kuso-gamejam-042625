@@ -17,9 +17,9 @@ public class ButtonController : MonoBehaviour
         for (int i = 0; i < _btnNumber; i++)
         {
             _buttons.Add(Instantiate(_btnPrefab, _btnGroup.transform));
-            _buttons[i].GetComponent<RectTransform>().localPosition
-                += new Vector3(i * (_buttons[i].GetComponent<RectTransform>().sizeDelta.x + _pos.x),
-                               i * (_buttons[i].GetComponent<RectTransform>().sizeDelta.y + _pos.y), 0);
+            //_buttons[i].GetComponent<RectTransform>().localPosition
+            //    += new Vector3(i * (_buttons[i].GetComponent<RectTransform>().sizeDelta.x + _pos.x),
+            //                   i * (_buttons[i].GetComponent<RectTransform>().sizeDelta.y + _pos.y), 0);
         }
     }
 }

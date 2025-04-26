@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ButtonCallback : MonoBehaviour
 {
     public Action<EffectData> OnClick;
-    
+
     private CardData _cardData;
     private ChoiceData _choiceData;
     private EffectData _effectData;
@@ -20,7 +20,8 @@ public class ButtonCallback : MonoBehaviour
 
     private void OnEnable()
     {
-        _button.onClick.AddListener(() => OnClick(_effectData));
+        //_button.onClick.AddListener(() => OnClick(_effectData));
+        _button.onClick.AddListener(() => ValueController.instance.SetEffectData(_effectData));
     }
     
     private void OnDisable()
