@@ -1,0 +1,32 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+
+public class DateHandler : MonoBehaviour
+{
+    [SerializeField] private TextMeshProUGUI dateText;
+
+    private DateTime _oriDate => DateTime.Now; 
+    private DateTime _dt;
+
+    private void Awake()
+    {
+        _dt = _oriDate;
+        UpdateUI();
+    }
+
+    public void AddMonth(EffectData effectData)
+    {
+        _dt = _dt.AddMonths(1);
+        UpdateUI();
+    }
+
+    private void UpdateUI()
+    {
+        if (!dateText) return;
+
+        dateText.text = _dt.ToString("yyyy/MM");
+    }
+}

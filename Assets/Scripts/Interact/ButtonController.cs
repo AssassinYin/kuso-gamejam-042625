@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 public class ButtonController : MonoBehaviour
 {
     [SerializeField] private ValueController valueController;
-    [SerializeField] private DateUpdater dateUpdater;
+    [SerializeField] private DateHandler dateUpdater;
     [SerializeField] private GameObject btnGroup;
     [SerializeField] private GameObject btnPrefab;
 
@@ -42,13 +42,13 @@ public class ButtonController : MonoBehaviour
     private void BindClickEvents(GameObject obj)
     {
         obj.GetComponent<ButtonCallback>().OnClick += valueController.SetEffectData;
-        obj.GetComponent<ButtonCallback>().OnClick += dateUpdater.AddDate;
+        obj.GetComponent<ButtonCallback>().OnClick += dateUpdater.AddMonth;
     }
 
     private void UnbindClickEvents(GameObject obj)
     {
         obj.GetComponent<ButtonCallback>().OnClick -= valueController.SetEffectData;
-        obj.GetComponent<ButtonCallback>().OnClick -= dateUpdater.AddDate;
+        obj.GetComponent<ButtonCallback>().OnClick -= dateUpdater.AddMonth;
     }
 
     public List<ButtonCallback> GetBtnCallbacks()
