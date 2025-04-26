@@ -12,13 +12,17 @@ public class ChoiceManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI titleText, descriptionText;
     [SerializeField] private Image image; 
     
-    private const string JsonFileName = "Assets/Resources/choices-database.json";
+    private const string jsonFileName = "choices-database";
     private List<CardData> _cardDatabase;
     
     public void Awake()
     {
-        _cardDatabase = JsonConvert.DeserializeObject<List<CardData>>(File.ReadAllText(JsonFileName));
-        GetNewChoice();
+        TextAsset json = Resources.Load<TextAsset>(jsonFileName);
+        if (json)
+        {
+            _cardDatabase = JsonConvert.DeserializeObject<List<CardData>>(json.text);
+            GetNewChoice();
+        }
     }
 
     private void OnLoadNewChoice(EffectData effectData)
