@@ -31,8 +31,8 @@ public class ChoiceManager : MonoBehaviour
         //descriptionText.text = _cardDatabase[0].description;
         //image.sprite = Resources.Load<Sprite>("Assets/Resources/" + _cardDatabase[0].thumbnailPath);
 
+        ClearChoices();
         GetNewChoice();
-        Debug.Log("aaa");
     }
 
     private void GetNewChoice()
@@ -50,5 +50,14 @@ public class ChoiceManager : MonoBehaviour
             choices[i].ChoiceData = card.choices[i];
             choices[i].OnClick += OnLoadNewChoice;
         }
+    }
+
+    private void ClearChoices()
+    {
+        for (int i = 0; i < choices.Count; i++)
+        {
+            choices[i].OnClick -= OnLoadNewChoice;
+        }
+        choices.Clear();
     }
 }

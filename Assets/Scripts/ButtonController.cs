@@ -17,6 +17,7 @@ public class ButtonController : MonoBehaviour
     {
         foreach (var btn in _buttons)
         {
+            btn.GetComponent<ButtonCallback>().OnClick -= valueController.SetEffectData;
             Destroy(btn);
         }
         _buttons.Clear();
