@@ -34,4 +34,11 @@ public class DateHandler : MonoBehaviour
     {
         return _dt > DateTime.Parse(dt);
     }
+
+    public string GetDateDiff()
+    {
+        int years = _dt.Year - _oriDate.Year;
+        int month = _dt.Month - _oriDate.Month;
+        return years + "/" + month;
+    }
 }

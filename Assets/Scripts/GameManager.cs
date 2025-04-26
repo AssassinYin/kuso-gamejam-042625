@@ -8,6 +8,10 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private Canvas endUI;
     [SerializeField] private TextMeshProUGUI endText;
+    [SerializeField] private List<string> endText_string = new List<string>();
+    [SerializeField] private TextMeshProUGUI timeText;
+    [SerializeField] private string timeText_string;
+
     [SerializeField] private DateHandler dateUpdater;
     private ValueController valueController;
 
@@ -37,13 +41,23 @@ public class GameManager : MonoBehaviour
         if (IsBadEnding())
         {
             isEnd = true;
-            Debug.Log("Bad End!");
+            endUI.gameObject.SetActive(true);
+            endText.text = endText_string[0];
+            HandleTimeTextInEnd();
         }
         else if (IsGoodEnding())
         {
             isEnd = true;
-            Debug.Log("Good End!");
+            endUI.gameObject.SetActive(true);
+            endText.text = endText_string[1];
+            HandleTimeTextInEnd();
         }
+    }
+
+    private void HandleTimeTextInEnd()
+    {
+        string[] dateDiff = dateUpdater.GetDateDiff().Split('/');
+        timeText.text = timeText_string.Replace("{Year}", dateDiff[0]).Replace("{Month}", dateDiff[1]);
     }
 
     private bool IsBadEnding()
