@@ -5,6 +5,6 @@ public class CardData
 {
     public string title;
     public string description;
-    public string thumbnailPath;
+    public string thumbnail;
     public List<ChoiceData> choices;
 }

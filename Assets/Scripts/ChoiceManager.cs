@@ -41,7 +41,7 @@ public class ChoiceManager : MonoBehaviour
 
         titleText.text = card.title;
         descriptionText.text = card.description;
-        image.sprite = Resources.Load<Sprite>("Assets/Resources/" + card.thumbnailPath);
+        image.sprite = Resources.Load<Sprite>("CardImage/" + card.thumbnail);
 
         buttonController.GenerateBtn(card.choices.Count, card.choices);
         choices = buttonController.GetBtnCallbacks();

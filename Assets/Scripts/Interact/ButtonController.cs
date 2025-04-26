@@ -13,7 +13,7 @@ public class ButtonController : MonoBehaviour
 
     private List<GameObject> _buttons = new List<GameObject>();
 
-    private void btnInit()
+    private void BtnInit()
     {
         foreach (var btn in _buttons)
         {
@@ -25,7 +25,7 @@ public class ButtonController : MonoBehaviour
 
     public void GenerateBtn(int btnNumber, List<ChoiceData> choiceDatas)
     {
-        btnInit();
+        BtnInit();
 
         // Dynamic generating buttons
         for (int i = 0; i < btnNumber; i++)
