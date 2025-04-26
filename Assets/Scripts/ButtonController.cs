@@ -1,29 +1,49 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class ButtonController : MonoBehaviour
 {
-    [SerializeField] private GameObject _btnGroup;
-    [SerializeField] private GameObject _btnPrefab;
-    [SerializeField] private int _btnNumber = 3;
+    [SerializeField] private ValueController valueController;
+    [SerializeField] private GameObject btnGroup;
+    [SerializeField] private GameObject btnPrefab;
 
-    private List<GameObject> _buttons => new List<GameObject>();
+    private List<GameObject> _buttons = new List<GameObject>();
 
-    private void Start()
+    private void btnInit()
     {
-        // Dynamic generating buttons
-        for (int i = 0; i < _btnNumber; i++)
+        foreach (var btn in _buttons)
         {
-            GameObject btn = Instantiate(_btnPrefab, _btnGroup.transform);
+            Destroy(btn);
+        }
+        _buttons.Clear();
+    }
+
+    public void GenerateBtn(int btnNumber, List<ChoiceData> choiceDatas)
+    {
+        btnInit();
+
+        // Dynamic generating buttons
+        for (int i = 0; i < btnNumber; i++)
+        {
+            GameObject btn = Instantiate(btnPrefab, btnGroup.transform);
+            btn.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = choiceDatas[i].text;
+            btn.AddComponent<ButtonCallback>().OnClick += valueController.SetEffectData;
             _buttons.Add(btn);
-            SetValueToButton();
         }
     }
 
-    private void SetValueToButton()
+    public List<ButtonCallback> GetBtnCallbacks()
     {
-        // TODO: Input value to ButtonCallback.cs
+        List<ButtonCallback> btnCB = new List<ButtonCallback>();
+        
+        foreach (var btn in _buttons)
+        {
+            btnCB.Add(btn.GetComponent<ButtonCallback>());
+        }
+        return btnCB;
     }
 }

@@ -7,7 +7,8 @@ using UnityEngine.UI;
 
 public class ChoiceManager : MonoBehaviour
 {
-    [SerializeField] private ButtonCallback choice1, choice2, choice3;
+    [SerializeField] private ButtonController buttonController;
+    [SerializeField] private List<ButtonCallback> choices;
     [SerializeField] private TextMeshProUGUI titleText, descriptionText;
     [SerializeField] private Image image; 
     
@@ -21,31 +22,33 @@ public class ChoiceManager : MonoBehaviour
         {
             Debug.Log(card.choices[0].text + " " + card.choices[1].text + " " + card.choices[2].text);
         }
+        GetNewChoice();
     }
-    
-    public void OnEnable()
-    {
-        choice1.OnClick += OnLoadNewChoice;
-        choice2.OnClick += OnLoadNewChoice;
-        choice3.OnClick += OnLoadNewChoice;
-    }
-    
-    public void OnDisable()
-    {
-        choice1.OnClick -= OnLoadNewChoice;
-        choice2.OnClick -= OnLoadNewChoice;
-        choice3.OnClick -= OnLoadNewChoice;
-    }
-    
+
     private void OnLoadNewChoice(EffectData effectData)
     {
-        titleText.text = _cardDatabase[0].title;
-        descriptionText.text = _cardDatabase[0].description;
-        image.sprite = Resources.Load<Sprite>("Assets/Resources/" + _cardDatabase[0].thumbnailPath);
-        
+        //titleText.text = _cardDatabase[0].title;
+        //descriptionText.text = _cardDatabase[0].description;
+        //image.sprite = Resources.Load<Sprite>("Assets/Resources/" + _cardDatabase[0].thumbnailPath);
+
+        GetNewChoice();
+        Debug.Log("aaa");
+    }
+
+    private void GetNewChoice()
+    {
         var card = _cardDatabase[Random.Range(0, _cardDatabase.Count)];
-        choice1.ChoiceData = card.choices[0];
-        choice2.ChoiceData = card.choices[1];
-        choice3.ChoiceData = card.choices[2];
+
+        titleText.text = card.title;
+        descriptionText.text = card.description;
+        image.sprite = Resources.Load<Sprite>("Assets/Resources/" + card.thumbnailPath);
+
+        buttonController.GenerateBtn(card.choices.Count, card.choices);
+        choices = buttonController.GetBtnCallbacks();
+        for (int i = 0; i < choices.Count; i++)
+        {
+            choices[i].ChoiceData = card.choices[i];
+            choices[i].OnClick += OnLoadNewChoice;
+        }
     }
 }
