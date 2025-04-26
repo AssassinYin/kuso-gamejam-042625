@@ -29,4 +29,9 @@ public class DateHandler : MonoBehaviour
 
         dateText.text = _dt.ToString("yyyy/MM");
     }
+
+    public bool IsEraEnd(string dt)
+    {
+        return _dt > DateTime.Parse(dt);
+    }
 }

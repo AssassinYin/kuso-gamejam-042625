@@ -654,6 +654,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30a27dace4b35c49b53f4c5d2f5b79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endUI: {fileID: 0}
+  endText: {fileID: 0}
+  dateUpdater: {fileID: 1986126942}
+  finalYear: 2100
+  finalMonth: 12
+  finalDate: 31
+  finalHour: 23
+  finalMin: 59
+  finalSec: 59
 --- !u!4 &1703632407
 Transform:
   m_ObjectHideFlags: 0
