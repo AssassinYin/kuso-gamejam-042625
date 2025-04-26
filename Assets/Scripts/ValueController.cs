@@ -19,11 +19,6 @@ public class ValueController : MonoBehaviour
     [SerializeField] private Image authorityImg;
     [SerializeField] private Image believersImg;
 
-    private void Update()
-    {
-        UpdateUI();
-    }
-
     private void UpdateUI()
     {
         discoverabilityImg.fillAmount = (float)data.discoverability / maxDiscoverability;
@@ -39,6 +34,7 @@ public class ValueController : MonoBehaviour
         data.believers += effectData.believers;
         data.discoverability += effectData.discoverability;
         NormalizeValue();
+        UpdateUI();
     }
 
     private void NormalizeValue()
