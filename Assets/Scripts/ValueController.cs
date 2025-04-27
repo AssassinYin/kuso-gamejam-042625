@@ -18,6 +18,7 @@ public class ValueController : MonoBehaviour
     [SerializeField] private Image fundsImg;
     [SerializeField] private Image authorityImg;
     [SerializeField] private Image believersImg;
+    [SerializeField] private ReporterController reporterController;
 
     private void Awake()
     {
@@ -30,6 +31,7 @@ public class ValueController : MonoBehaviour
         fundsImg.fillAmount = (float)data.funds / maxFunds;
         authorityImg.fillAmount = (float)data.authority / maxAuthority;
         believersImg.fillAmount = (float)data.believers / maxBelievers;
+        reporterController.UpdateReporterUI(discoverabilityImg.fillAmount);
     }
 
     public void SetEffectData(EffectData effectData)
