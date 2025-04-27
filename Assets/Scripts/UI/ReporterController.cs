@@ -36,6 +36,8 @@ public class ReporterController : MonoBehaviour
         //HideAllReporters();
         if (ratio == lastRatio) return;
 
+        // TODO: Maybe have some bug.
+        // The reporter can't remove completely.
         if (ratio > lastRatio)
         {
             for (float r = lastRatio; r < ratio; r += intervalRatio)
