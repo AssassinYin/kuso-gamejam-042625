@@ -34,19 +34,18 @@ public class ButtonController : MonoBehaviour
         authorityImgIcon.AddComponent<BlinkImg>().BlinkSpeed = blinkSpeed;
         believersImg.AddComponent<BlinkImg>().BlinkSpeed = blinkSpeed;
         believersImgIcon.AddComponent<BlinkImg>().BlinkSpeed = blinkSpeed;
-
         SetIconEnabled(false);
     }
 
     private void SetIconEnabled(bool isEnabled)
     {
-        discoverabilityImg.enabled = isEnabled;
-        fundsImg.enabled = isEnabled;
-        fundsImgIcon.enabled = isEnabled;
-        authorityImg.enabled = isEnabled;
-        authorityImgIcon.enabled = isEnabled;
-        believersImg.enabled = isEnabled;
-        believersImgIcon.enabled = isEnabled;
+        discoverabilityImg.GetComponent<BlinkImg>().enabled = isEnabled;
+        fundsImg.GetComponent<BlinkImg>().enabled = isEnabled;
+        fundsImgIcon.GetComponent<BlinkImg>().enabled = isEnabled;
+        authorityImg.GetComponent<BlinkImg>().enabled = isEnabled;
+        authorityImgIcon.GetComponent<BlinkImg>().enabled = isEnabled;
+        believersImg.GetComponent<BlinkImg>().enabled = isEnabled;
+        believersImgIcon.GetComponent<BlinkImg>().enabled = isEnabled;
     }
 
     private void BtnInit()
@@ -78,16 +77,16 @@ public class ButtonController : MonoBehaviour
 
     private void BindEvents(GameObject obj)
     {
-        obj.GetComponent<EventTrigger>().OnPointerEnter += ;
-        obj.GetComponent<EventTrigger>().OnPointerExit +=;
+        //obj.GetComponent<EventTrigger>().OnPointerEnter += ;
+        //obj.GetComponent<EventTrigger>().OnPointerExit +=;
         obj.GetComponent<ButtonCallback>().OnClick += valueController.SetEffectData;
         obj.GetComponent<ButtonCallback>().OnClick += dateUpdater.AddMonth;
     }
 
     private void UnbindEvents(GameObject obj)
     {
-        obj.GetComponent<EventTrigger>().OnPointerEnter -= ;
-        obj.GetComponent<EventTrigger>().OnPointerExit -=;
+        //obj.GetComponent<EventTrigger>().OnPointerEnter -= ;
+        //obj.GetComponent<EventTrigger>().OnPointerExit -=;
         obj.GetComponent<ButtonCallback>().OnClick -= valueController.SetEffectData;
         obj.GetComponent<ButtonCallback>().OnClick -= dateUpdater.AddMonth;
     }
@@ -102,4 +101,6 @@ public class ButtonController : MonoBehaviour
         }
         return btnCB;
     }
+
+    //private void OnPointerEntera
 }
