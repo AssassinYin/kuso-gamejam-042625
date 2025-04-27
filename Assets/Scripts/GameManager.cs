@@ -8,10 +8,11 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private Canvas endUI;
-    [SerializeField] private Image image;
+    [SerializeField] private Image endImage;
     [SerializeField] private TextMeshProUGUI endText;
     [SerializeField] private List<string> endTexts = new List<string>();
     [SerializeField] private List<Sprite> endImages = new List<Sprite>();
+    [SerializeField] private Image bgImage;
 
     [Header("Date Settings")]
     [SerializeField] private DateHandler dateUpdater;
@@ -47,7 +48,7 @@ public class GameManager : MonoBehaviour
             endUI.gameObject.SetActive(true);
             HandleTimeTextInEnd();
             endText.text = endTexts[0];
-            image.sprite = endImages[0];
+            endImage.sprite = endImages[0];
         }
         else if (IsGoodEnding())
         {
@@ -55,8 +56,10 @@ public class GameManager : MonoBehaviour
             endUI.gameObject.SetActive(true);
             HandleTimeTextInEnd();
             endText.text = endTexts[1];
-            image.sprite = endImages[1];
+            endImage.sprite = endImages[1];
         }
+
+        bgImage.GetComponent<BlinkImg>().BlinkSpeed = valueController.GetDiscoverabilityRatio() + 0.1f;
     }
 
     private void HandleTimeTextInEnd()

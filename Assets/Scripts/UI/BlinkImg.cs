@@ -9,6 +9,7 @@ public class BlinkImg : MonoBehaviour
     private Image _img;
 
     [SerializeField] private float blinkSpeed = 1f;
+    public float BlinkSpeed { set => blinkSpeed = value; get => blinkSpeed; }
 
     private float _alphaVal;
     private bool _isFadeIn = false;

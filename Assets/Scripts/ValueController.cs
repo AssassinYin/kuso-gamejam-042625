@@ -20,6 +20,11 @@ public class ValueController : MonoBehaviour
     [SerializeField] private Image believersImg;
     [SerializeField] private ReporterController reporterController;
 
+    public float GetDiscoverabilityRatio()
+    {
+        return (float)data.discoverability / maxDiscoverability;
+    }
+
     private void Awake()
     {
         UpdateUI();

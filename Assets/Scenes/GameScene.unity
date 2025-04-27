@@ -122,17 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &65284395 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7941719067487411588, guid: 1372862acd35c954ab93d14d182f0227, type: 3}
-  m_PrefabInstance: {fileID: 1631579338}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &378937144 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7823289585793370886, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
@@ -426,6 +415,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UICanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2023447625450689457, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2329520673218195210, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -569,7 +562,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5423565917400990976, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1122049795}
   m_SourcePrefab: {fileID: 100100000, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
 --- !u!114 &1012155704 stripped
 MonoBehaviour:
@@ -580,6 +576,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18e62ac433f80784e88eea41b5880715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1122049791 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5423565917400990976, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
+  m_PrefabInstance: {fileID: 979270116}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1122049795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122049791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c86b1ede92c0f1048bf674aba6aa70fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blinkSpeed: 0.1
+--- !u!114 &1122049797 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2023447625450689457, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
+  m_PrefabInstance: {fileID: 979270116}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122049791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1245768791 stripped
@@ -886,7 +911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endUI: {fileID: 1631579339}
-  image: {fileID: 65284395}
+  endImage: {fileID: 419141704}
   endText: {fileID: 1631579340}
   endTexts:
   - "\u4F60\u7684\u72AF\u7F6A\u884C\u70BA\u88AB\u57F7\u6CD5\u55AE\u4F4D\u767C\u73FE\uFF0C\u88AB\u5BE9\u5224\u5B98\u5165\u5927\u7262\uFF01"
@@ -894,6 +919,7 @@ MonoBehaviour:
   endImages:
   - {fileID: 21300000, guid: e4f3c24804d0b37489c305e88a5d0f1a, type: 3}
   - {fileID: 21300000, guid: df9c28341da7bfe45af4a1857e9be086, type: 3}
+  bgImage: {fileID: 1122049797}
   dateUpdater: {fileID: 1986126942}
   timeText: {fileID: 787979577}
   timeTextS: "\u7D93\u904E\u6642\u9593 {Year} \u5E74 {Month} \u500B\u6708"

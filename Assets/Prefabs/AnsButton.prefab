@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 1103438830320297706}
   - component: {fileID: 5429528142589445059}
   - component: {fileID: 2007834134078380332}
+  - component: {fileID: 5801305421800197226}
   m_Layer: 5
   m_Name: AnsButton
   m_TagString: Untagged
@@ -255,3 +256,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5801305421800197226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8715465788469682821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d3aed0961d253e41ab5de16d65462e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectData:
+    funds: 0
+    discoverability: 0
+    authority: 0
+    believers: 0
