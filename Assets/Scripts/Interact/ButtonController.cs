@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -12,6 +13,7 @@ public class ButtonController : MonoBehaviour
     [SerializeField] private DateHandler dateUpdater;
     [SerializeField] private GameObject btnGroup;
     [SerializeField] private GameObject btnPrefab;
+    private AudioSource _audioSource;
 
     [Header("Tip Seetings")]
     [SerializeField] private Image discoverabilityImg;
@@ -35,6 +37,11 @@ public class ButtonController : MonoBehaviour
         believersImg.AddComponent<BlinkImg>().BlinkSpeed = blinkSpeed;
         believersImgIcon.AddComponent<BlinkImg>().BlinkSpeed = blinkSpeed;
         SetIconEnabled(false);
+    }
+
+    private void Start()
+    {
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void SetIconEnabled(bool isEnabled)
@@ -68,7 +75,6 @@ public class ButtonController : MonoBehaviour
             GameObject btn = Instantiate(btnPrefab, btnGroup.transform);
             btn.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = choiceDatas[i].text;
             btn.GetComponent<ButtonCardData>().effectData = choiceDatas[i].effect;
-            btn.AddComponent<EventTrigger>();
             btn.AddComponent<ButtonCallback>();
             BindEvents(btn);
             _buttons.Add(btn);
@@ -77,18 +83,25 @@ public class ButtonController : MonoBehaviour
 
     private void BindEvents(GameObject obj)
     {
-        //obj.GetComponent<EventTrigger>().OnPointerEnter += ;
-        //obj.GetComponent<EventTrigger>().OnPointerExit +=;
+        obj.GetComponent<ButtonCallback>().OnPointerEnterButton += OnPointerEnterButton;
+        obj.GetComponent<ButtonCallback>().OnPointerExitButton += OnPointerExitButton;
+        obj.GetComponent<ButtonCallback>().OnClick += PlayClickAudio;
         obj.GetComponent<ButtonCallback>().OnClick += valueController.SetEffectData;
         obj.GetComponent<ButtonCallback>().OnClick += dateUpdater.AddMonth;
     }
 
     private void UnbindEvents(GameObject obj)
     {
-        //obj.GetComponent<EventTrigger>().OnPointerEnter -= ;
-        //obj.GetComponent<EventTrigger>().OnPointerExit -=;
+        obj.GetComponent<ButtonCallback>().OnPointerEnterButton -= OnPointerEnterButton;
+        obj.GetComponent<ButtonCallback>().OnPointerExitButton -= OnPointerExitButton;
+        obj.GetComponent<ButtonCallback>().OnClick -= PlayClickAudio;
         obj.GetComponent<ButtonCallback>().OnClick -= valueController.SetEffectData;
         obj.GetComponent<ButtonCallback>().OnClick -= dateUpdater.AddMonth;
+    }
+
+    private void PlayClickAudio(EffectData data)
+    {
+        _audioSource.Play();
     }
 
     public List<ButtonCallback> GetBtnCallbacks()
@@ -102,5 +115,13 @@ public class ButtonController : MonoBehaviour
         return btnCB;
     }
 
-    //private void OnPointerEntera
+    private void OnPointerEnterButton(PointerEventData eventData)
+    {
+        Debug.Log("Enter: " + eventData.pointerEnter.gameObject.name);
+    }
+
+    private void OnPointerExitButton(PointerEventData eventData)
+    {
+        Debug.Log("Exit: " + eventData.pointerEnter.gameObject.name);
+    }
 }
