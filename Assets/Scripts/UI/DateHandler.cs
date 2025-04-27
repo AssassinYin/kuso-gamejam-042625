@@ -8,6 +8,8 @@ public class DateHandler : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI dateText;
 
+    public static DateTime Instance;
+
     private DateTime _oriDate => DateTime.Now; 
     private DateTime _dt;
 
@@ -15,6 +17,7 @@ public class DateHandler : MonoBehaviour
     {
         _dt = _oriDate;
         UpdateUI();
+        Instance = _dt;
     }
 
     public void AddMonth(EffectData effectData)
