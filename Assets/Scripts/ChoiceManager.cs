@@ -58,7 +58,7 @@ public class ChoiceManager : MonoBehaviour
 
     private CardData decideOnNextCardData()
     {
-        if (_shipEventIndex != _shipDatabase.Count)
+        if (_shipEventIndex != _shipDatabase.Count && _walletEventIndex == 0)
         {
             if (_shipEventIndex != 0 || Random.Range(0, 24) == 0)
             {
@@ -66,7 +66,7 @@ public class ChoiceManager : MonoBehaviour
             }
         }
         
-        if (_walletEventIndex != _walletDatabase.Count)
+        if (_walletEventIndex != _walletDatabase.Count && _shipEventIndex == 0)
         {
             if (_walletEventIndex != 0 || Random.Range(0, 10) == 0)
             {
@@ -75,10 +75,12 @@ public class ChoiceManager : MonoBehaviour
         }
         
         if (valueController.data.funds > 70 || valueController.data.authority > 70 || valueController.data.believers > 70)
-            return _cardDatabase3[Random.Range(0, _cardDatabase3.Count)];
+            if (Random.Range(0, 4) == 0)
+                return _cardDatabase3[Random.Range(0, _cardDatabase3.Count)];
         
         if (valueController.data.funds > 50 || valueController.data.authority > 50 || valueController.data.believers > 50)
-            return _cardDatabase2[Random.Range(0, _cardDatabase2.Count)];
+            if (Random.Range(0, 4) == 0)
+                return _cardDatabase2[Random.Range(0, _cardDatabase2.Count)];
         
         return _cardDatabase1[Random.Range(0, _cardDatabase1.Count)];
     }
