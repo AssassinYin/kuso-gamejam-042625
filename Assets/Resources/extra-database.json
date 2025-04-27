@@ -1,0 +1,127 @@
+[
+  {
+    "title": "導入績效制度",
+    "description": "用績效制度鼓勵信徒實施傳教活動。",
+    "thumbnail": "ex_card_thumbnail_1",
+    "choices": [
+      {
+        "text": "嚴格執行，有賞有罰",
+        "effect": {
+          "funds": 10,
+          "discoverability": 20,
+          "authority": 5,
+          "believers": 25
+        }
+      },
+      {
+        "text": "溫和鼓勵，講求氣氛",
+        "effect": {
+          "discoverability": 5,
+          "authority": 15,
+          "believers": 10
+        }
+      },
+      {
+        "text": "講績效太庸俗",
+        "effect": {
+          "discoverability": -5,
+          "authority": 5,
+          "believers": -5
+        }
+      }
+    ]
+  },
+  {
+    "title": "展現神蹟",
+    "description": "在信徒面前展現自己的力量。",
+    "thumbnail": "ex_card_thumbnail_2",
+    "choices": [
+      {
+        "text": "一定要驚世駭俗！",
+        "effect": {
+          "funds": -20,
+          "discoverability": 25,
+          "authority": 30,
+          "believers": 20
+        }
+      },
+      {
+        "text": "規模不用那麼大",
+        "effect": {
+          "funds": -10,
+          "discoverability": 10,
+          "authority": 15,
+          "believers": 10
+        }
+      },
+      {
+        "text": "還是算了，怕被揭穿",
+        "effect": {
+          "discoverability": -10,
+          "authority": -10,
+          "believers": -10
+        }
+      }
+    ]
+  },
+  {
+    "title": "玄學與科學",
+    "description": "不相信你的人找了科學家打算拆穿你的騙局",
+    "thumbnail": "ex_card_thumbnail_3",
+    "choices": [
+      {
+        "text": "暗中陷害科學家",
+        "effect": {
+          "funds": -10,
+          "discoverability": -15,
+          "authority": 25,
+          "believers": -10
+        }
+      },
+      {
+        "text": "科學的盡頭是玄學",
+        "effect": {
+          "authority": 5,
+          "believers": 10
+        }
+      },
+      {
+        "text": "大方接受科學檢驗",
+        "effect": {
+          "funds": 5,
+          "discoverability": 20,
+          "authority": 10,
+          "believers": 5
+        }
+      }
+    ]
+  },
+  {
+    "title": "你的心靈不需要課程",
+    "description": "知名Youtuber大肆批評你的心靈課程",
+    "thumbnail": "ex_card_thumbnail_4",
+    "choices": [
+      {
+        "text": "發布模稜兩可的貼文",
+        "effect": {
+          "discoverability": 10,
+          "authority": 10
+        }
+      },
+      {
+        "text": "公開道歉",
+        "effect": {
+          "discoverability": 5,
+          "authority": -10,
+          "believers": -10
+        }
+      },
+      {
+        "text": "無視他",
+        "effect": {
+          "authority": -10
+        }
+      }
+    ]
+  }
+]

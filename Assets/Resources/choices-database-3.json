@@ -98,15 +98,16 @@
       {
         "text": "成立新基金會轉移焦點",
         "effect": {
-          "funds": -10,
-          "discoverability": 5
+          "funds": -30,
+          "discoverability": -5
         }
       },
       {
         "text": "承認部分問題，假改革",
         "effect": {
           "authority": -10,
-          "believers": 5
+          "believers": 5,
+          "discoverability": -10
         }
       }
     ]
@@ -119,8 +120,8 @@
       {
         "text": "購買媒體版面進行反擊",
         "effect": {
-          "funds": -15,
-          "discoverability": -5
+          "funds": -30,
+          "discoverability": -10
         }
       },
       {
@@ -133,8 +134,10 @@
       {
         "text": "短暫低調，等待風頭過去",
         "effect": {
-          "discoverability": -10,
-          "authority": -5
+          "discoverability": -30,
+          "authority": -10,
+          "funds": -10,
+          "believers": -10
         }
       }
     ]
@@ -147,50 +150,54 @@
       {
         "text": "提高忠誠者待遇，強化內部福利",
         "effect": {
-          "funds": -15,
+          "funds": -20,
           "believers": 10
         }
       },
       {
         "text": "製造恐懼，威脅叛逃者",
         "effect": {
-          "authority": 10,
-          "believers": -10
+          "discoverability": 30,
+          "authority": 20,
+          "believers": -20
         }
       },
       {
         "text": "重新塑造外部敵人形象",
         "effect": {
-          "authority": 5,
-          "discoverability": 5
+          "discoverability": 10,
+          "authority": 10,
+          "funds": -20,
+          "believers": 10
         }
       }
     ]
   },
   {
-    "title": "領袖健康惡化",
-    "description": "領袖出現健康問題，導致教團未來陷入不確定。",
+    "title": "高層健康惡化",
+    "description": "教團高層出現健康問題，導致教團未來陷入不確定。",
     "thumbnail": "card_thumbnail_27",
     "choices": [
       {
         "text": "隱瞞健康狀況",
         "effect": {
-          "authority": 10,
-          "discoverability": -5
+          "discoverability": -10,
+          "authority": -5
         }
       },
       {
         "text": "培養接班人，穩定內部",
         "effect": {
           "authority": -5,
+          "funds": -10,
           "believers": 5
         }
       },
       {
         "text": "將病痛塑造成神聖試煉",
         "effect": {
-          "authority": 15,
-          "believers": 5
+          "authority": 10,
+          "discoverability": 10
         }
       }
     ]
@@ -204,21 +211,21 @@
         "text": "公開詆毀叛徒",
         "effect": {
           "authority": 10,
-          "believers": -5
+          "believers": -10
         }
       },
       {
         "text": "提議和解，減緩衝突",
         "effect": {
-          "authority": -10,
-          "discoverability": -5
+          "authority": -10
         }
       },
       {
         "text": "默默施壓打壓對方",
         "effect": {
-          "funds": -10,
-          "discoverability": -5
+          "funds": -20,
+          "discoverability": -5,
+          "authority": 20
         }
       }
     ]
@@ -231,22 +238,24 @@
       {
         "text": "動員信徒抗議政府打壓",
         "effect": {
-          "authority": 20,
-          "believers": -10
+          "discoverability": 10,
+          "authority": 10,
+          "funds": 10
         }
       },
       {
         "text": "秘密疏通關係，尋求撤案",
         "effect": {
-          "funds": -20,
-          "discoverability": -10
+          "funds": 20,
+          "discoverability": -10,
+          "authority": -40
         }
       },
       {
         "text": "暫時裁撤部分機構，降低風險",
         "effect": {
-          "authority": -5,
-          "funds": -10
+          "authority": -10,
+          "funds": 10
         }
       }
     ]

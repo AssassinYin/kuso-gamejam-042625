@@ -7,16 +7,15 @@
       {
         "text": "暗示海上事故是最佳時機",
         "effect": {
-          "authority": 10,
-          "funds": 5
+          "discoverability": 5
         }
       },
       {
         "text": "要求國家資金支持教團",
         "effect": {
           "funds": 40,
-          "discoverability": 40,
-          "authority": -5
+          "discoverability": 80,
+          "authority": -20
         }
       },
       {
@@ -41,14 +40,15 @@
       {
         "text": "指示信徒優先逃生",
         "effect": {
-          "believers": -5,
-          "funds": 5
+          "believers": 5,
+          "authority": 5,
+          "discoverability": -5
         }
       },
       {
         "text": "廣播假消息：救援已在路上",
         "effect": {
-          "authority": 5,
+          "believers": -5,
           "discoverability": -5
         }
       }
@@ -62,22 +62,22 @@
       {
         "text": "暗示這是必要的獻祭",
         "effect": {
-          "authority": 10,
+          "discoverability": 30,
+          "authority": 5,
           "believers": 5
         }
       },
       {
         "text": "譴責政府，洗白自己",
         "effect": {
-          "discoverability": 10,
-          "authority": -5
+          "discoverability": 15,
+          "believers": 10
         }
       },
       {
         "text": "保持沉默",
         "effect": {
-          "believers": -5,
-          "funds": 5
+          "discoverability": -10
         }
       }
     ]
@@ -90,6 +90,7 @@
       {
         "text": "發聲明稱一切是神的考驗",
         "effect": {
+          "discoverability": 15,
           "authority": 5,
           "believers": -5
         }
@@ -98,14 +99,14 @@
         "text": "派信徒假扮家屬，混淆視聽",
         "effect": {
           "discoverability": -5,
-          "authority": 5
+          "authority": -10
         }
       },
       {
         "text": "全面噤聲，刪除相關資料",
         "effect": {
-          "funds": -10,
-          "discoverability": -10
+          "discoverability": -10,
+          "funds": -10
         }
       }
     ]
@@ -118,14 +119,16 @@
       {
         "text": "設立『殉道者之子』獎學金，減少外部質疑",
         "effect": {
-          "discoverability": 10,
+          "discoverability": 5,
+          "authority": 15,
+          "believers": 15,
           "funds": -10
         }
       },
       {
         "text": "加強洗腦，抹除內部質疑",
         "effect": {
-          "authority": 15,
+          "authority": 10,
           "believers": -5
         }
       },

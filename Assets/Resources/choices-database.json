@@ -7,14 +7,14 @@
       {
         "text": "錄下來當音頻教材",
         "effect": {
-          "funds": 15,
-          "discoverability": 10
+          "funds": 5,
+          "discoverability": 5
         }
       },
       {
         "text": "只講給核心信徒聽",
         "effect": {
-          "authority": 10,
+          "authority": 5,
           "discoverability": -5
         }
       },
@@ -22,7 +22,7 @@
         "text": "我什麼也沒聽到",
         "effect": {
           "believers": -10,
-          "discoverability": 5
+          "discoverability": -5
         }
       }
     ]
@@ -35,22 +35,22 @@
       {
         "text": "派律師搞定",
         "effect": {
-          "funds": -15,
-          "discoverability": -10
+          "funds": -10,
+          "discoverability": -5
         }
       },
       {
         "text": "說是競爭教派抹黑",
         "effect": {
           "authority": 10,
-          "discoverability": 5
+          "discoverability": 10
         }
       },
       {
         "text": "發文否認，裝傻",
         "effect": {
-          "discoverability": 0,
-          "believers": 0
+          "discoverability": 10,
+          "believers": -5
         }
       }
     ]
@@ -63,22 +63,22 @@
       {
         "text": "搞超大祭典！",
         "effect": {
-          "believers": 20,
-          "discoverability": 20,
-          "funds": -15
+          "believers": 10,
+          "discoverability": 10,
+          "funds": -10
         }
       },
       {
         "text": "只邀內部人士",
         "effect": {
-          "authority": 10,
+          "authority": 5,
           "funds": -5
         }
       },
       {
         "text": "低調省錢，今年不辦",
         "effect": {
-          "believers": -10,
+          "believers": -7,
           "funds": 10
         }
       }
@@ -92,22 +92,22 @@
       {
         "text": "接受，神會保佑他",
         "effect": {
-          "funds": 30,
-          "discoverability": 20
+          "funds": 10,
+          "discoverability": 10
         }
       },
       {
         "text": "只收一半",
         "effect": {
-          "funds": 15,
-          "discoverability": 10
+          "funds": 5,
+          "discoverability": 5
         }
       },
       {
         "text": "退回，叫他冷靜",
         "effect": {
           "authority": 10,
-          "funds": -10
+          "funds": -5
         }
       }
     ]
@@ -120,22 +120,22 @@
       {
         "text": "開課！再賣個證書",
         "effect": {
-          "funds": 30,
-          "discoverability": 15
+          "funds": 10,
+          "discoverability": 5
         }
       },
       {
         "text": "免費給核心成員",
         "effect": {
-          "authority": 15,
-          "funds": -10
+          "authority": 5,
+          "funds": -5
         }
       },
       {
         "text": "不搞這套行銷",
         "effect": {
-          "discoverability": 0,
-          "believers": 5
+          "discoverability": -3,
+          "believers": 3
         }
       }
     ]
@@ -148,23 +148,22 @@
       {
         "text": "當然！神都喝這個",
         "effect": {
-          "funds": 20,
-          "discoverability": 10,
-          "authority": -5
+          "funds": 10,
+          "discoverability": 5,
+          "authority": -3
         }
       },
       {
         "text": "只偷偷掛名",
         "effect": {
-          "funds": 10,
-          "discoverability": 5
+          "funds": 5 
         }
       },
       {
         "text": "拒絕玷污神名",
         "effect": {
-          "authority": 10,
-          "funds": -10
+          "authority": 6,
+          "funds": -3
         }
       }
     ]
@@ -177,23 +176,23 @@
       {
         "text": "舉辦火行儀式",
         "effect": {
-          "authority": 15,
-          "discoverability": 20,
-          "believers": -10
+          "authority": 6,
+          "discoverability": 10,
+          "believers": -8
         }
       },
       {
         "text": "心理測驗就好",
         "effect": {
-          "believers": 10,
-          "discoverability": 5
+          "believers": 6,
+          "discoverability": 4
         }
       },
       {
         "text": "人人皆可加入",
         "effect": {
-          "believers": 15,
-          "authority": -10
+          "believers": 10,
+          "authority": -8
         }
       }
     ]
@@ -206,21 +205,21 @@
       {
         "text": "那是神在背後",
         "effect": {
-          "authority": 20,
-          "discoverability": 10
+          "authority": 5,
+          "discoverability": 3
         }
       },
       {
         "text": "微笑點頭，不否認",
         "effect": {
-          "authority": 10
+          "authority": 7
         }
       },
       {
         "text": "請他不要幻想",
         "effect": {
-          "believers": -5,
-          "authority": -5
+          "believers": -3,
+          "authority": -3
         }
       }
     ]
@@ -262,15 +261,17 @@
       {
         "text": "授權他經營",
         "effect": {
-          "believers": 20,
-          "discoverability": 20
+          "believers": -10,
+          "found": 10,
+          "discoverability": -10
         }
       },
       {
         "text": "自己親自過去拓點",
         "effect": {
-          "authority": 15,
-          "funds": -10
+          "authority": 10,
+          "funds": -5,
+          "discoverability": 10
         }
       },
       {

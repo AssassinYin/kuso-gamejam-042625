@@ -16,8 +16,14 @@ public class ChoiceManager : MonoBehaviour
     private int _walletEventIndex, _shipEventIndex;
     private const string
         JsonFileName1 = "choices-database", JsonFileName2 = "choices-database-2", JsonFileName3 = "choices-database-3",
-        WalletEvent = "wallet", ShipEvent = "ship";
-    private List<CardData> _cardDatabase1, _cardDatabase2, _cardDatabase3, _walletDatabase, _shipDatabase;
+        WalletEvent = "wallet", ShipEvent = "ship", ExtraEvent = "extra-database";
+
+    private List<CardData> _cardDatabase1,
+        _cardDatabase2,
+        _cardDatabase3,
+        _walletDatabase,
+        _shipDatabase,
+        _extraDatabase;
     
     public void Awake()
     {
@@ -29,6 +35,7 @@ public class ChoiceManager : MonoBehaviour
         _cardDatabase3 = JsonConvert.DeserializeObject<List<CardData>>(Resources.Load<TextAsset>(JsonFileName3).text);
         _walletDatabase = JsonConvert.DeserializeObject<List<CardData>>(Resources.Load<TextAsset>(WalletEvent).text);
         _shipDatabase = JsonConvert.DeserializeObject<List<CardData>>(Resources.Load<TextAsset>(ShipEvent).text);
+        _extraDatabase = JsonConvert.DeserializeObject<List<CardData>>(Resources.Load<TextAsset>(ExtraEvent).text);
         
         GetNewChoice();
     }
@@ -58,7 +65,7 @@ public class ChoiceManager : MonoBehaviour
 
     private CardData decideOnNextCardData()
     {
-        if (_shipEventIndex != _shipDatabase.Count && _walletEventIndex == 0)
+        if (_shipEventIndex != _shipDatabase.Count && (_walletEventIndex == 0 || _walletEventIndex == _walletDatabase.Count))
         {
             if (_shipEventIndex != 0 || Random.Range(0, 24) == 0)
             {
@@ -66,7 +73,7 @@ public class ChoiceManager : MonoBehaviour
             }
         }
         
-        if (_walletEventIndex != _walletDatabase.Count && _shipEventIndex == 0)
+        if (_walletEventIndex != _walletDatabase.Count && (_shipEventIndex == 0 || _shipEventIndex == _shipDatabase.Count))
         {
             if (_walletEventIndex != 0 || Random.Range(0, 10) == 0)
             {
@@ -74,13 +81,16 @@ public class ChoiceManager : MonoBehaviour
             }
         }
         
-        if (valueController.data.funds > 70 || valueController.data.authority > 70 || valueController.data.believers > 70)
-            if (Random.Range(0, 4) == 0)
+        if (valueController.data.funds > 50 && valueController.data.authority > 50 && valueController.data.believers > 50)
+            if (Random.Range(0, 8) == 0)
                 return _cardDatabase3[Random.Range(0, _cardDatabase3.Count)];
         
-        if (valueController.data.funds > 50 || valueController.data.authority > 50 || valueController.data.believers > 50)
-            if (Random.Range(0, 4) == 0)
+        if (valueController.data.funds > 30 && valueController.data.authority > 30 && valueController.data.believers > 30)
+            if (Random.Range(0, 8) == 0)
                 return _cardDatabase2[Random.Range(0, _cardDatabase2.Count)];
+        
+        if (Random.Range(0, 6) == 0)
+            return _extraDatabase[Random.Range(0, _extraDatabase.Count)];
         
         return _cardDatabase1[Random.Range(0, _cardDatabase1.Count)];
     }

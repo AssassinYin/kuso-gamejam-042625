@@ -8,14 +8,14 @@
         "text": "公開譴責背叛者",
         "effect": {
           "authority": 15,
-          "believers": -5
+          "believers": -5,
+          "discoverability": 10
         }
       },
       {
         "text": "秘密警告核心成員",
         "effect": {
-          "authority": 5,
-          "discoverability": -5
+          "authority": 10
         }
       },
       {
@@ -42,14 +42,13 @@
       {
         "text": "召開懺悔會議",
         "effect": {
-          "authority": 5,
-          "believers": 10
+          "authority": 5
         }
       },
       {
         "text": "置之不理，觀察動向",
         "effect": {
-          "authority": -5,
+          "authority": -10,
           "discoverability": -5
         }
       }
@@ -63,7 +62,7 @@
       {
         "text": "接受並授予特權",
         "effect": {
-          "funds": 25,
+          "funds": 20,
           "authority": -10
         }
       },
@@ -71,14 +70,14 @@
         "text": "婉拒並維持公平",
         "effect": {
           "authority": 10,
-          "funds": -10
+          "funds": -20
         }
       },
       {
         "text": "秘密接受，表面平等",
         "effect": {
           "funds": 20,
-          "discoverability": -5
+          "authority": -5
         }
       }
     ]
@@ -99,7 +98,8 @@
         "text": "譴責媒體扭曲事實",
         "effect": {
           "authority": 10,
-          "believers": 5
+          "believers": 5,
+          "discoverability": 10
         }
       },
       {
@@ -119,14 +119,15 @@
       {
         "text": "鼓勵大家捐出所有財產",
         "effect": {
-          "funds": 30,
-          "believers": -10
+          "authority": -10,
+          "funds": 20,
+          "believers": -10,
+          "discoverability": 10
         }
       },
       {
         "text": "安撫情緒，模糊時間點",
         "effect": {
-          "authority": 10,
           "discoverability": -5
         }
       },
@@ -134,7 +135,7 @@
         "text": "撤回預言，怪罪解讀錯誤",
         "effect": {
           "authority": -15,
-          "believers": 5
+          "discoverability": -10
         }
       }
     ]
@@ -161,8 +162,7 @@
       {
         "text": "忽略這個夢境",
         "effect": {
-          "believers": -5,
-          "discoverability": 5
+          "believers": -5
         }
       }
     ]
@@ -176,7 +176,8 @@
         "text": "販售水晶並宣稱其療效",
         "effect": {
           "funds": 20,
-          "authority": -5
+          "authority": -5,
+          "discoverability": 3
         }
       },
       {
@@ -211,7 +212,8 @@
         "text": "將經歷寫成書籍出版",
         "effect": {
           "funds": 10,
-          "authority": 5
+          "authority": 5,
+          "discoverability": 3
         }
       },
       {

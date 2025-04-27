@@ -7,8 +7,7 @@
       {
         "text": "看起來好像不是我的。",
         "effect": {
-          "authority": 10,
-          "believers": 5
+          "authority": 2
         }
       }
     ]
@@ -21,22 +20,20 @@
       {
         "text": "不，不是我的。",
         "effect": {
-          "discoverability": 10,
-          "authority": 5
+          "authority": 2
         }
       }
     ]
   },
   {
     "title": "就是你的",
-    "description": "就是你的 我要當一個好人 把皮夾還給你",
+    "description": "就是你的，我要當一個好人，把皮夾還給你",
     "thumbnail": "wallet_card_thumbnail_3",
     "choices": [
       {
         "text": "還什麼給誰。",
         "effect": {
-          "authority": 15,
-          "believers": 10
+          "authority": 2
         }
       }
     ]
@@ -49,8 +46,7 @@
       {
         "text": "對啊。",
         "effect": {
-          "believers": 15,
-          "discoverability": 5
+          "authority": 2
         }
       }
     ]
@@ -63,8 +59,7 @@
       {
         "text": "對。",
         "effect": {
-          "believers": 15,
-          "discoverability": 5
+          "authority": 2
         }
       }
     ]
@@ -77,8 +72,7 @@
       {
         "text": "你說的有道理耶。",
         "effect": {
-          "believers": 15,
-          "discoverability": 5
+          "authority": 2
         }
       }
     ]
@@ -91,8 +85,7 @@
       {
         "text": "那不是我的。",
         "effect": {
-          "believers": 15,
-          "discoverability": 5
+          "authority": 2
         }
       }
     ]
@@ -105,15 +98,13 @@
       {
         "text": "把皮夾拿回去。",
         "effect": {
-          "believers": 15,
-          "discoverability": 5
+          "funds": 15
         }
       },
       {
         "text": "不拿。",
         "effect": {
-          "believers": 15,
-          "discoverability": 5
+          "authority": 10
         }
       }
     ]
