@@ -20,6 +20,11 @@ public class ValueController : MonoBehaviour
     [SerializeField] private Image believersImg;
     [SerializeField] private ReporterController reporterController;
 
+    [Header("Audio")]
+    [SerializeField] private MusicController musicController;
+    [SerializeField] private bool isPitchReversed = true;
+    [SerializeField] private float ratio = 0.05f;
+
     public float GetDiscoverabilityRatio()
     {
         return (float)data.discoverability / maxDiscoverability;
@@ -52,6 +57,7 @@ public class ValueController : MonoBehaviour
         data.discoverability += effectData.discoverability;
         NormalizeValue();
         UpdateUI();
+        musicController.AddPitch(ratio * effectData.discoverability, isPitchReversed);
     }
 
     private void NormalizeValue()
