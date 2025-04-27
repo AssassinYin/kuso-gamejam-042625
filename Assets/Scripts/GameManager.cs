@@ -3,19 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private Canvas endUI;
+    [SerializeField] private Image image;
     [SerializeField] private TextMeshProUGUI endText;
-    [SerializeField] private List<string> endText_string = new List<string>();
-    [SerializeField] private TextMeshProUGUI timeText;
-    [SerializeField] private string timeText_string;
-
-    [SerializeField] private DateHandler dateUpdater;
-    private ValueController valueController;
+    [SerializeField] private List<string> endTexts = new List<string>();
+    [SerializeField] private List<Sprite> endImages = new List<Sprite>();
 
     [Header("Date Settings")]
+    [SerializeField] private DateHandler dateUpdater;
+    [SerializeField] private TextMeshProUGUI timeText;
+    [SerializeField] private string timeTextS;
     [SerializeField] private int finalYear = 2100;
     [SerializeField] private int finalMonth = 12;
     [SerializeField] private int finalDate = 31;
@@ -23,6 +24,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int finalMin = 59;
     [SerializeField] private int finalSec = 59;
     private string datetime_str;
+
+    private ValueController valueController;
 
     private bool isEnd = false;
 
@@ -42,22 +45,24 @@ public class GameManager : MonoBehaviour
         {
             isEnd = true;
             endUI.gameObject.SetActive(true);
-            endText.text = endText_string[0];
             HandleTimeTextInEnd();
+            endText.text = endTexts[0];
+            image.sprite = endImages[0];
         }
         else if (IsGoodEnding())
         {
             isEnd = true;
             endUI.gameObject.SetActive(true);
-            endText.text = endText_string[1];
             HandleTimeTextInEnd();
+            endText.text = endTexts[1];
+            image.sprite = endImages[1];
         }
     }
 
     private void HandleTimeTextInEnd()
     {
         string[] dateDiff = dateUpdater.GetDateDiff().Split('/');
-        timeText.text = timeText_string.Replace("{Year}", dateDiff[0]).Replace("{Month}", dateDiff[1]);
+        timeText.text = timeTextS.Replace("{Year}", dateDiff[0]).Replace("{Month}", dateDiff[1]);
     }
 
     private bool IsBadEnding()
