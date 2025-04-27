@@ -434,6 +434,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2584102329382530288, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2584102329382530288, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2584102329382530288, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2584102329382530288, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058851991620042521, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058851991620042521, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 5358782803882599013, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -533,6 +557,10 @@ PrefabInstance:
     - target: {fileID: 6957225666048815102, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7980789583773530515, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8332288816187461601, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
       propertyPath: valueController
@@ -663,6 +691,10 @@ PrefabInstance:
     - target: {fileID: 447597077027664851, guid: 1372862acd35c954ab93d14d182f0227, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221647068538820837, guid: 1372862acd35c954ab93d14d182f0227, type: 3}
+      propertyPath: m_text
+      value: "\u7D93\u904E\u6642\u9593 {Year} \u5E74 {Month} \u500B\u6708"
       objectReference: {fileID: 0}
     - target: {fileID: 2359851141040564838, guid: 1372862acd35c954ab93d14d182f0227, type: 3}
       propertyPath: m_Name
