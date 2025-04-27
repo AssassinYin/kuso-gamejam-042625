@@ -1,0 +1,121 @@
+[
+  {
+    "title": "你在教育一個反派",
+    "description": "對不起教主，你的皮夾掉了",
+    "thumbnail": "wallet_card_thumbnail_1",
+    "choices": [
+      {
+        "text": "看起來好像不是我的。",
+        "effect": {
+          "authority": 10,
+          "believers": 5
+        }
+      }
+    ]
+  },
+  {
+    "title": "你弄掉的",
+    "description": "什麼？我看到你弄掉的。拿去。",
+    "thumbnail": "wallet_card_thumbnail_2",
+    "choices": [
+      {
+        "text": "不，不是我的。",
+        "effect": {
+          "discoverability": 10,
+          "authority": 5
+        }
+      }
+    ]
+  },
+  {
+    "title": "就是你的",
+    "description": "就是你的 我要當一個好人 把皮夾還給你",
+    "thumbnail": "wallet_card_thumbnail_3",
+    "choices": [
+      {
+        "text": "還什麼給誰。",
+        "effect": {
+          "authority": 15,
+          "believers": 10
+        }
+      }
+    ]
+  },
+  {
+    "title": "不是我的（再次）",
+    "description": "你不是教主嗎",
+    "thumbnail": "wallet_card_thumbnail_4",
+    "choices": [
+      {
+        "text": "對啊。",
+        "effect": {
+          "believers": 15,
+          "discoverability": 5
+        }
+      }
+    ]
+  },
+  {
+    "title": "不是我的（再再次）",
+    "description": "這是你的身分證",
+    "thumbnail": "wallet_card_thumbnail_5",
+    "choices": [
+      {
+        "text": "對。",
+        "effect": {
+          "believers": 15,
+          "discoverability": 5
+        }
+      }
+    ]
+  },
+  {
+    "title": "不是我的（再再次）",
+    "description": "這張身分證就放在皮夾裡，所以就一定可以證明，這是你的皮夾。",
+    "thumbnail": "wallet_card_thumbnail_6",
+    "choices": [
+      {
+        "text": "你說的有道理耶。",
+        "effect": {
+          "believers": 15,
+          "discoverability": 5
+        }
+      }
+    ]
+  },
+  {
+    "title": "拿回去",
+    "description": "拿回去",
+    "thumbnail": "wallet_card_thumbnail_7",
+    "choices": [
+      {
+        "text": "那不是我的。",
+        "effect": {
+          "believers": 15,
+          "discoverability": 5
+        }
+      }
+    ]
+  },
+  {
+    "title": "不是我的（再再再再次）",
+    "description": "大呆頭，皮夾拿回去，不然我打斷你的手",
+    "thumbnail": "wallet_card_thumbnail_8",
+    "choices": [
+      {
+        "text": "把皮夾拿回去。",
+        "effect": {
+          "believers": 15,
+          "discoverability": 5
+        }
+      },
+      {
+        "text": "不拿。",
+        "effect": {
+          "believers": 15,
+          "discoverability": 5
+        }
+      }
+    ]
+  }
+]

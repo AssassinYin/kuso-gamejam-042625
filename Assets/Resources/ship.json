@@ -1,0 +1,140 @@
+[
+  {
+    "title": "獻祭",
+    "description": "你私下向總統建議，『獻祭年輕靈魂』能換取國運昌隆。",
+    "thumbnail": "ship_card_thumbnail_1",
+    "choices": [
+      {
+        "text": "暗示海上事故是最佳時機",
+        "effect": {
+          "authority": 10,
+          "funds": 5
+        }
+      },
+      {
+        "text": "要求國家資金支持教團",
+        "effect": {
+          "funds": 40,
+          "discoverability": 40,
+          "authority": -5
+        }
+      },
+      {
+        "text": "公開支持獻祭建議",
+        "effect": {
+          "discoverability": 100
+        }
+      }
+    ]
+  },
+  {
+    "title": "沉船",
+    "description": "當船體傾斜，信徒們向你請求指示。",
+    "thumbnail": "ship_card_thumbnail_2",
+    "choices": [
+      {
+        "text": "命令他們疏散人群",
+        "effect": {
+          "discoverability": 100
+        }
+      },
+      {
+        "text": "指示信徒優先逃生",
+        "effect": {
+          "believers": -5,
+          "funds": 5
+        }
+      },
+      {
+        "text": "廣播假消息：救援已在路上",
+        "effect": {
+          "authority": 5,
+          "discoverability": -5
+        }
+      }
+    ]
+  },
+  {
+    "title": "救援",
+    "description": "政府機構行動遲緩，似乎有人刻意拖延時間，只讓少部分人獲救。",
+    "thumbnail": "ship_card_thumbnail_3",
+    "choices": [
+      {
+        "text": "暗示這是必要的獻祭",
+        "effect": {
+          "authority": 10,
+          "believers": 5
+        }
+      },
+      {
+        "text": "譴責政府，洗白自己",
+        "effect": {
+          "discoverability": 10,
+          "authority": -5
+        }
+      },
+      {
+        "text": "保持沉默",
+        "effect": {
+          "believers": -5,
+          "funds": 5
+        }
+      }
+    ]
+  },
+  {
+    "title": "怒火",
+    "description": "家屬在媒體上痛批教團與政府勾結，要求徹查。",
+    "thumbnail": "ship_card_thumbnail_4",
+    "choices": [
+      {
+        "text": "發聲明稱一切是神的考驗",
+        "effect": {
+          "authority": 5,
+          "believers": -5
+        }
+      },
+      {
+        "text": "派信徒假扮家屬，混淆視聽",
+        "effect": {
+          "discoverability": -5,
+          "authority": 5
+        }
+      },
+      {
+        "text": "全面噤聲，刪除相關資料",
+        "effect": {
+          "funds": -10,
+          "discoverability": -10
+        }
+      }
+    ]
+  },
+  {
+    "title": "春日",
+    "description": "部分家屬懷疑這場悲劇是有計劃的獻祭行動，陰謀論在國內蔓延。",
+    "thumbnail": "ship_card_thumbnail_5",
+    "choices": [
+      {
+        "text": "設立『殉道者之子』獎學金，減少外部質疑",
+        "effect": {
+          "discoverability": 10,
+          "funds": -10
+        }
+      },
+      {
+        "text": "加強洗腦，抹除內部質疑",
+        "effect": {
+          "authority": 15,
+          "believers": -5
+        }
+      },
+      {
+        "text": "挑選替罪羊，轉移焦點",
+        "effect": {
+          "discoverability": -15
+        }
+      }
+    ]
+  }
+]

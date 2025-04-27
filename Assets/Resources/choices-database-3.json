@@ -1,0 +1,282 @@
+[
+  {
+    "title": "資金挪用醜聞",
+    "description": "外界揭露領導層將捐款用於豪華生活，信徒開始質疑。",
+    "thumbnail": "card_thumbnail_21",
+    "choices": [
+      {
+        "text": "否認指控，塑造受害者形象",
+        "effect": {
+          "authority": 10,
+          "discoverability": 15
+        }
+      },
+      {
+        "text": "推卸責任給下屬",
+        "effect": {
+          "authority": 5,
+          "believers": -5
+        }
+      },
+      {
+        "text": "公開道歉並承諾改革",
+        "effect": {
+          "authority": -10,
+          "believers": 5
+        }
+      }
+    ]
+  },
+  {
+    "title": "虐待指控",
+    "description": "前成員爆料教團內部存在精神與身體虐待。",
+    "thumbnail": "card_thumbnail_22",
+    "choices": [
+      {
+        "text": "控告爆料者誹謗",
+        "effect": {
+          "authority": 15,
+          "funds": -10
+        }
+      },
+      {
+        "text": "封鎖消息，壓制媒體",
+        "effect": {
+          "discoverability": -10,
+          "authority": 5
+        }
+      },
+      {
+        "text": "內部清理，犧牲小領袖",
+        "effect": {
+          "authority": 5,
+          "believers": -5
+        }
+      }
+    ]
+  },
+  {
+    "title": "核心內鬥",
+    "description": "高層成員因利益分配不均開始互相攻擊，局勢緊張。",
+    "thumbnail": "card_thumbnail_23",
+    "choices": [
+      {
+        "text": "強勢干預，清除異己",
+        "effect": {
+          "authority": 20,
+          "believers": -10
+        }
+      },
+      {
+        "text": "協商調停，分配利益",
+        "effect": {
+          "authority": -5,
+          "funds": -10
+        }
+      },
+      {
+        "text": "放任鬥爭，坐收漁翁之利",
+        "effect": {
+          "believers": -5,
+          "discoverability": 5
+        }
+      }
+    ]
+  },
+  {
+    "title": "非法資金來源曝光",
+    "description": "教團資金來源中包含洗錢與地下交易紀錄，被媒體揭露。",
+    "thumbnail": "card_thumbnail_24",
+    "choices": [
+      {
+        "text": "抹去證據，賄賂調查員",
+        "effect": {
+          "funds": -20,
+          "discoverability": -10
+        }
+      },
+      {
+        "text": "成立新基金會轉移焦點",
+        "effect": {
+          "funds": -10,
+          "discoverability": 5
+        }
+      },
+      {
+        "text": "承認部分問題，假改革",
+        "effect": {
+          "authority": -10,
+          "believers": 5
+        }
+      }
+    ]
+  },
+  {
+    "title": "媒體全面追擊",
+    "description": "主流媒體開始集中火力揭露教團黑幕，信譽急速下滑。",
+    "thumbnail": "card_thumbnail_25",
+    "choices": [
+      {
+        "text": "購買媒體版面進行反擊",
+        "effect": {
+          "funds": -15,
+          "discoverability": -5
+        }
+      },
+      {
+        "text": "轉向小眾平台宣傳",
+        "effect": {
+          "discoverability": -5,
+          "believers": 5
+        }
+      },
+      {
+        "text": "短暫低調，等待風頭過去",
+        "effect": {
+          "discoverability": -10,
+          "authority": -5
+        }
+      }
+    ]
+  },
+  {
+    "title": "成員流失潮",
+    "description": "大量普通成員開始退出，導致信徒人數大幅減少。",
+    "thumbnail": "card_thumbnail_26",
+    "choices": [
+      {
+        "text": "提高忠誠者待遇，強化內部福利",
+        "effect": {
+          "funds": -15,
+          "believers": 10
+        }
+      },
+      {
+        "text": "製造恐懼，威脅叛逃者",
+        "effect": {
+          "authority": 10,
+          "believers": -10
+        }
+      },
+      {
+        "text": "重新塑造外部敵人形象",
+        "effect": {
+          "authority": 5,
+          "discoverability": 5
+        }
+      }
+    ]
+  },
+  {
+    "title": "領袖健康惡化",
+    "description": "領袖出現健康問題，導致教團未來陷入不確定。",
+    "thumbnail": "card_thumbnail_27",
+    "choices": [
+      {
+        "text": "隱瞞健康狀況",
+        "effect": {
+          "authority": 10,
+          "discoverability": -5
+        }
+      },
+      {
+        "text": "培養接班人，穩定內部",
+        "effect": {
+          "authority": -5,
+          "believers": 5
+        }
+      },
+      {
+        "text": "將病痛塑造成神聖試煉",
+        "effect": {
+          "authority": 15,
+          "believers": 5
+        }
+      }
+    ]
+  },
+  {
+    "title": "內部分裂",
+    "description": "一部分高層叛逃，自立新教派，並指責你的教團腐敗墮落。",
+    "thumbnail": "card_thumbnail_28",
+    "choices": [
+      {
+        "text": "公開詆毀叛徒",
+        "effect": {
+          "authority": 10,
+          "believers": -5
+        }
+      },
+      {
+        "text": "提議和解，減緩衝突",
+        "effect": {
+          "authority": -10,
+          "discoverability": -5
+        }
+      },
+      {
+        "text": "默默施壓打壓對方",
+        "effect": {
+          "funds": -10,
+          "discoverability": -5
+        }
+      }
+    ]
+  },
+  {
+    "title": "司法調查展開",
+    "description": "政府部門開始正式調查教團運作，凍結部分資產。",
+    "thumbnail": "card_thumbnail_29",
+    "choices": [
+      {
+        "text": "動員信徒抗議政府打壓",
+        "effect": {
+          "authority": 20,
+          "believers": -10
+        }
+      },
+      {
+        "text": "秘密疏通關係，尋求撤案",
+        "effect": {
+          "funds": -20,
+          "discoverability": -10
+        }
+      },
+      {
+        "text": "暫時裁撤部分機構，降低風險",
+        "effect": {
+          "authority": -5,
+          "funds": -10
+        }
+      }
+    ]
+  },
+  {
+    "title": "領導者逃亡",
+    "description": "在壓力山大之下，你考慮是否潛逃國外以避免牢獄之災。",
+    "thumbnail": "card_thumbnail_30",
+    "choices": [
+      {
+        "text": "秘密轉移資金並逃亡",
+        "effect": {
+          "funds": -30,
+          "believers": -20
+        }
+      },
+      {
+        "text": "任命代理領袖，暫時隱身",
+        "effect": {
+          "authority": -10,
+          "believers": -5
+        }
+      },
+      {
+        "text": "死守陣地，等待奇蹟",
+        "effect": {
+          "authority": 10,
+          "funds": -20
+        }
+      }
+    ]
+  }
+]

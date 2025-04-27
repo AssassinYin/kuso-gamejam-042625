@@ -1,0 +1,282 @@
+[
+  {
+    "title": "神諭中的懲罰",
+    "description": "你宣稱神對不信者感到震怒，需要採取行動以示懲戒。",
+    "thumbnail": "card_thumbnail_11",
+    "choices": [
+      {
+        "text": "公開譴責背叛者",
+        "effect": {
+          "authority": 15,
+          "believers": -5
+        }
+      },
+      {
+        "text": "秘密警告核心成員",
+        "effect": {
+          "authority": 5,
+          "discoverability": -5
+        }
+      },
+      {
+        "text": "無視神諭",
+        "effect": {
+          "believers": -10,
+          "funds": -5
+        }
+      }
+    ]
+  },
+  {
+    "title": "內部叛變",
+    "description": "一小群資深信徒質疑你的領導地位，並暗中聚集支持者。",
+    "thumbnail": "card_thumbnail_12",
+    "choices": [
+      {
+        "text": "立刻開除叛徒",
+        "effect": {
+          "authority": 15,
+          "believers": -5
+        }
+      },
+      {
+        "text": "召開懺悔會議",
+        "effect": {
+          "authority": 5,
+          "believers": 10
+        }
+      },
+      {
+        "text": "置之不理，觀察動向",
+        "effect": {
+          "authority": -5,
+          "discoverability": -5
+        }
+      }
+    ]
+  },
+  {
+    "title": "捐獻的奇蹟",
+    "description": "一名富有的信徒提出巨額捐款，但希望在教團中獲得特權。",
+    "thumbnail": "card_thumbnail_13",
+    "choices": [
+      {
+        "text": "接受並授予特權",
+        "effect": {
+          "funds": 25,
+          "authority": -10
+        }
+      },
+      {
+        "text": "婉拒並維持公平",
+        "effect": {
+          "authority": 10,
+          "funds": -10
+        }
+      },
+      {
+        "text": "秘密接受，表面平等",
+        "effect": {
+          "funds": 20,
+          "discoverability": -5
+        }
+      }
+    ]
+  },
+  {
+    "title": "神聖儀式曝光",
+    "description": "有媒體曝光了教團的一場秘密儀式，引發社會關注。",
+    "thumbnail": "card_thumbnail_14",
+    "choices": [
+      {
+        "text": "公開美化儀式意義",
+        "effect": {
+          "discoverability": 15,
+          "authority": 5
+        }
+      },
+      {
+        "text": "譴責媒體扭曲事實",
+        "effect": {
+          "authority": 10,
+          "believers": 5
+        }
+      },
+      {
+        "text": "立刻低調撤回活動",
+        "effect": {
+          "discoverability": -10,
+          "authority": -5
+        }
+      }
+    ]
+  },
+  {
+    "title": "末日預言",
+    "description": "你突然宣稱世界將在三個月內毀滅，信徒們陷入恐慌。",
+    "thumbnail": "card_thumbnail_15",
+    "choices": [
+      {
+        "text": "鼓勵大家捐出所有財產",
+        "effect": {
+          "funds": 30,
+          "believers": -10
+        }
+      },
+      {
+        "text": "安撫情緒，模糊時間點",
+        "effect": {
+          "authority": 10,
+          "discoverability": -5
+        }
+      },
+      {
+        "text": "撤回預言，怪罪解讀錯誤",
+        "effect": {
+          "authority": -15,
+          "believers": 5
+        }
+      }
+    ]
+  },
+  {
+    "title": "神諭之夜",
+    "description": "你夢見一位神秘人物，傳達了未來的預言。",
+    "thumbnail": "card_thumbnail_16",
+    "choices": [
+      {
+        "text": "將夢境內容寫成預言書",
+        "effect": {
+          "funds": 10,
+          "discoverability": 15
+        }
+      },
+      {
+        "text": "只與核心信徒分享夢境",
+        "effect": {
+          "authority": 10,
+          "discoverability": -5
+        }
+      },
+      {
+        "text": "忽略這個夢境",
+        "effect": {
+          "believers": -5,
+          "discoverability": 5
+        }
+      }
+    ]
+  },
+  {
+    "title": "能量水晶的啟示",
+    "description": "你聲稱一塊水晶賦予你治癒的能力。",
+    "thumbnail": "card_thumbnail_17",
+    "choices": [
+      {
+        "text": "販售水晶並宣稱其療效",
+        "effect": {
+          "funds": 20,
+          "authority": -5
+        }
+      },
+      {
+        "text": "將水晶供奉於祭壇",
+        "effect": {
+          "believers": 10,
+          "funds": -5
+        }
+      },
+      {
+        "text": "將水晶交給科學家研究",
+        "effect": {
+          "authority": 5,
+          "believers": -10
+        }
+      }
+    ]
+  },
+  {
+    "title": "靈魂出竅體驗",
+    "description": "你宣稱自己經歷了靈魂出竅的神秘經歷。",
+    "thumbnail": "card_thumbnail_18",
+    "choices": [
+      {
+        "text": "舉辦靈魂出竅工作坊",
+        "effect": {
+          "funds": 15,
+          "discoverability": 10
+        }
+      },
+      {
+        "text": "將經歷寫成書籍出版",
+        "effect": {
+          "funds": 10,
+          "authority": 5
+        }
+      },
+      {
+        "text": "保持沉默，避免爭議",
+        "effect": {
+          "believers": -5,
+          "authority": 5
+        }
+      }
+    ]
+  },
+  {
+    "title": "神秘符號的出現",
+    "description": "你在冥想時看到了一組神秘的符號。",
+    "thumbnail": "card_thumbnail_19",
+    "choices": [
+      {
+        "text": "將符號製作成護身符販售",
+        "effect": {
+          "funds": 20,
+          "discoverability": 5
+        }
+      },
+      {
+        "text": "將符號解讀為神的訊息",
+        "effect": {
+          "authority": 10,
+          "believers": 5
+        }
+      },
+      {
+        "text": "忽略這些符號",
+        "effect": {
+          "believers": -10,
+          "authority": 5
+        }
+      }
+    ]
+  },
+  {
+    "title": "神聖植物的啟示",
+    "description": "你聲稱某種植物能夠開啟心靈的視野。",
+    "thumbnail": "card_thumbnail_20",
+    "choices": [
+      {
+        "text": "製作植物提取物並販售",
+        "effect": {
+          "funds": 25,
+          "authority": -5
+        }
+      },
+      {
+        "text": "舉辦植物冥想儀式",
+        "effect": {
+          "believers": 10,
+          "discoverability": 10
+        }
+      },
+      {
+        "text": "將植物交給研究機構分析",
+        "effect": {
+          "authority": 10,
+          "funds": -5
+        }
+      }
+    ]
+  }
+]
