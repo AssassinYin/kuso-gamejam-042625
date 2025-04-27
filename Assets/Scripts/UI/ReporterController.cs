@@ -11,7 +11,7 @@ public class ReporterController : MonoBehaviour
     [SerializeField] private GameObject reporterLPrefab;
     [SerializeField] private GameObject reporterRPrefab;
     [SerializeField] private float intervalRatio; // 0~1
-    private float lastRatio;
+    private float lastRatio = 0;
 
     private List<GameObject> reportersL_list = new List<GameObject>();
     private List<GameObject> reportersR_list = new List<GameObject>();
@@ -38,33 +38,46 @@ public class ReporterController : MonoBehaviour
 
         if (ratio > lastRatio)
         {
-            if (isLeft)
+            for (float r = lastRatio; r < ratio; r += intervalRatio)
             {
-                GameObject reporter = Instantiate(reporterLPrefab, reporterL.transform);
-                Vector3 pos = GetPositionRange(reporter);
-                reporter.GetComponent<RectTransform>().localPosition = pos;
-                reportersL_list.Add(reporter);
+                if (isLeft)
+                {
+                    GameObject reporter = Instantiate(reporterLPrefab, reporterL.transform);
+                    Vector3 pos = GetPositionRange(reporter);
+                    reporter.GetComponent<RectTransform>().localPosition = pos;
+                    reportersL_list.Add(reporter);
+                }
+                else
+                {
+                    GameObject reporter = Instantiate(reporterRPrefab, reporterR.transform);
+                    Vector3 pos = GetPositionRange(reporter);
+                    reporter.GetComponent<RectTransform>().localPosition = pos;
+                    reportersR_list.Add(reporter);
+                }
+                isLeft = !isLeft;
             }
-            else
-            {
-                GameObject reporter = Instantiate(reporterRPrefab, reporterR.transform);
-                Vector3 pos = GetPositionRange(reporter);
-                reporter.GetComponent<RectTransform>().localPosition = pos;
-                reportersR_list.Add(reporter);
-            }
-            isLeft = !isLeft;
         }
         else
         {
-            if (isLeft)
+            for (float r = lastRatio; r >= ratio; r -= intervalRatio)
             {
-                Destroy(reportersL_list[reportersL_list.Count - 1]);
-                reportersL_list.RemoveAt(reportersL_list.Count - 1);
-            }
-            else
-            {
-                Destroy(reportersR_list[reportersR_list.Count - 1]);
-                reportersR_list.RemoveAt(reportersR_list.Count - 1);
+                if (isLeft)
+                {
+                    if (reportersL_list.Count > 0)
+                    {
+                        Destroy(reportersL_list[reportersL_list.Count - 1]);
+                        reportersL_list.RemoveAt(reportersL_list.Count - 1);
+                    }
+                }
+                else
+                {
+                    if (reportersR_list.Count > 0)
+                    {
+                        Destroy(reportersR_list[reportersR_list.Count - 1]);
+                        reportersR_list.RemoveAt(reportersR_list.Count - 1);
+                    }
+                }
+                isLeft = !isLeft;
             }
         }
         lastRatio = ratio;

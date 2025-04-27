@@ -25,6 +25,11 @@ public class ValueController : MonoBehaviour
         UpdateUI();
     }
 
+    //private void Update()
+    //{
+    //    UpdateUI();
+    //}
+
     private void UpdateUI()
     {
         discoverabilityImg.fillAmount = (float)data.discoverability / maxDiscoverability;
