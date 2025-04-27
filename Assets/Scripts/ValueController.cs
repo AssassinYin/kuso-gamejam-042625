@@ -78,10 +78,18 @@ public class ValueController : MonoBehaviour
         return data.discoverability >= maxDiscoverability;
     }
 
-    public bool IsGoodEnding()
+    public bool IsFundMax()
     {
-        return data.funds >= maxFunds 
-            && data.authority >= maxAuthority
-            && data.believers >= maxBelievers;
+        return data.funds >= maxFunds;
+    }
+
+    public bool IsAuthorityMax()
+    {
+        return data.authority >= maxAuthority;
+    }
+
+    public bool IsBelieversMax()
+    {
+        return data.believers >= maxBelievers; ;
     }
 }

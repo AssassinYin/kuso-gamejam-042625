@@ -1057,7 +1057,7 @@ MonoBehaviour:
   believersImg: {fileID: 378937144}
   reporterController: {fileID: 1012155704}
   musicController: {fileID: 2026704488}
-  isPitchReversed: 1
+  isPitchReversed: 0
   ratio: 0.001
 --- !u!114 &1703632406
 MonoBehaviour:
@@ -1117,6 +1117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcf01fe065fd493186c7f9aba61e5b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  valueController: {fileID: 1703632405}
   buttonController: {fileID: 822957613}
   choices: []
   titleText: {fileID: 1245768791}

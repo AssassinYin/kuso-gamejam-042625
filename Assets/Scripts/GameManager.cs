@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
             endText.text = endTexts[0];
             endImage.sprite = endImages[0];
         }
-        else if (IsGoodEnding())
+        else if (IsGoodEnding1())
         {
             isEnd = true;
             endUI.gameObject.SetActive(true);
@@ -73,8 +73,13 @@ public class GameManager : MonoBehaviour
         return valueController.IsBadEnding() || dateUpdater.IsEraEnd(datetime_str);
     }
 
-    private bool IsGoodEnding()
+    private bool IsGoodEnding1()
     {
-        return valueController.IsGoodEnding();
+        return valueController.IsFundMax();
+    }
+
+    private bool IsGoodEnding2()
+    {
+        return valueController.IsBelieversMax();
     }
 }
