@@ -9,6 +9,7 @@ public class ButtonCallback : MonoBehaviour
     public Action<EffectData> OnClick;
     public Action<PointerEventData> OnPointerEnterButton;
     public Action<PointerEventData> OnPointerExitButton;
+    public Action<PointerEventData> OnPointerUpButton;
     public ChoiceData ChoiceData { set => _choiceData = value; }
     
     private ChoiceData _choiceData;
@@ -16,6 +17,7 @@ public class ButtonCallback : MonoBehaviour
 
     private EventTrigger.Entry _btnEnterEntry;
     private EventTrigger.Entry _btnExitEntry;
+    private EventTrigger.Entry _btnUpEntry;
     private EventTrigger _trigger;
 
     private void Awake()
@@ -25,8 +27,10 @@ public class ButtonCallback : MonoBehaviour
 
         _btnEnterEntry = new EventTrigger.Entry { eventID = EventTriggerType.PointerEnter };
         _btnExitEntry = new EventTrigger.Entry { eventID = EventTriggerType.PointerExit };
+        _btnUpEntry = new EventTrigger.Entry { eventID = EventTriggerType.PointerUp };
         _trigger.triggers.Add(_btnEnterEntry);
         _trigger.triggers.Add(_btnExitEntry);
+        _trigger.triggers.Add(_btnUpEntry);
     }
 
     private void OnEnable()
@@ -34,6 +38,7 @@ public class ButtonCallback : MonoBehaviour
         _button.onClick.AddListener(() => OnClick(_choiceData.effect));
         _btnEnterEntry.callback.AddListener((data) => { OnPointerEnterButton((PointerEventData)data); });
         _btnExitEntry.callback.AddListener((data) => { OnPointerExitButton((PointerEventData)data); });
+        _btnUpEntry.callback.AddListener((data) => { OnPointerUpButton((PointerEventData)data); });
     }
     
     private void OnDisable()
@@ -41,5 +46,6 @@ public class ButtonCallback : MonoBehaviour
         _button.onClick.RemoveListener(() => OnClick(_choiceData.effect));
         _btnEnterEntry.callback.RemoveListener((data) => { OnPointerEnterButton((PointerEventData)data); });
         _btnExitEntry.callback.RemoveListener((data) => { OnPointerExitButton((PointerEventData)data); });
+        _btnUpEntry.callback.RemoveListener((data) => { OnPointerUpButton((PointerEventData)data); });
     }
 }
