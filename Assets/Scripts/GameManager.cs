@@ -58,6 +58,22 @@ public class GameManager : MonoBehaviour
             endText.text = endTexts[1];
             endImage.sprite = endImages[1];
         }
+        else if (IsGoodEnding2())
+        {
+            isEnd = true;
+            endUI.gameObject.SetActive(true);
+            HandleTimeTextInEnd();
+            endText.text = endTexts[2];
+            endImage.sprite = endImages[2];
+        }
+        else if (IsGoodEnding3())
+        {
+            isEnd = true;
+            endUI.gameObject.SetActive(true);
+            HandleTimeTextInEnd();
+            endText.text = endTexts[3];
+            endImage.sprite = endImages[3];
+        }
 
         bgImage.GetComponent<BlinkImg>().BlinkSpeed = valueController.GetDiscoverabilityRatio() + 0.1f;
     }
@@ -75,11 +91,16 @@ public class GameManager : MonoBehaviour
 
     private bool IsGoodEnding1()
     {
-        return valueController.IsFundMax();
+        return valueController.IsBelieversMax(); 
     }
 
     private bool IsGoodEnding2()
     {
-        return valueController.IsBelieversMax();
+        return valueController.IsFundMax();
+    }
+
+    private bool IsGoodEnding3()
+    {
+        return valueController.IsAuthorityMax();
     }
 }
