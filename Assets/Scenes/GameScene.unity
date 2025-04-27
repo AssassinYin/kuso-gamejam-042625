@@ -277,6 +277,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &729282964 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4444886952071975811, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
+  m_PrefabInstance: {fileID: 979270116}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &787979577 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1221647068538820837, guid: 1372862acd35c954ab93d14d182f0227, type: 3}
@@ -297,6 +308,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3f173c1bfbca9848b0adcd63737b664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &830342439 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8668763087330082247, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
+  m_PrefabInstance: {fileID: 979270116}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &963194225
@@ -556,9 +578,41 @@ PrefabInstance:
       value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8332288816187461601, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
+      propertyPath: fundsImg
+      value: 
+      objectReference: {fileID: 395306799}
+    - target: {fileID: 8332288816187461601, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
+      propertyPath: authorityImg
+      value: 
+      objectReference: {fileID: 663559219}
+    - target: {fileID: 8332288816187461601, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
+      propertyPath: believersImg
+      value: 
+      objectReference: {fileID: 378937144}
+    - target: {fileID: 8332288816187461601, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
+      propertyPath: fundsImgIcon
+      value: 
+      objectReference: {fileID: 830342439}
+    - target: {fileID: 8332288816187461601, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
       propertyPath: valueController
       value: 
       objectReference: {fileID: 1703632405}
+    - target: {fileID: 8332288816187461601, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
+      propertyPath: authorityImgIcon
+      value: 
+      objectReference: {fileID: 2119447628}
+    - target: {fileID: 8332288816187461601, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
+      propertyPath: believersImgIcon
+      value: 
+      objectReference: {fileID: 729282964}
+    - target: {fileID: 8332288816187461601, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
+      propertyPath: discoverabilityImg
+      value: 
+      objectReference: {fileID: 1492011479}
+    - target: {fileID: 8668763087330082247, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
+      propertyPath: m_Color.a
+      value: 0.7254902
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -981,6 +1035,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a797fa92388e6d2439d29adfc1081c3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2119447628 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8732424279044752570, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
+  m_PrefabInstance: {fileID: 979270116}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
