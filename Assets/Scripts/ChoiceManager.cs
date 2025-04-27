@@ -13,6 +13,10 @@ public class ChoiceManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI titleText, descriptionText;
     [SerializeField] private Image image;
 
+    [Header("Condition")]
+    [SerializeField] private EffectData database2Condition;
+    [SerializeField] private EffectData database3Condition;
+
     private int _walletEventIndex, _shipEventIndex;
     private const string
         JsonFileName1 = "choices-database", JsonFileName2 = "choices-database-2", JsonFileName3 = "choices-database-3",
@@ -80,12 +84,14 @@ public class ChoiceManager : MonoBehaviour
                 return _walletDatabase[_walletEventIndex++];
             }
         }
-        
-        if (valueController.data.funds > 50 && valueController.data.authority > 50 && valueController.data.believers > 50)
+
+        // TODO: I change the conditions, let it can trigger easy. (by Kalin)
+        if (valueController.data.funds > database2Condition.funds || valueController.data.authority > database2Condition.authority || valueController.data.believers > database2Condition.believers)
             if (Random.Range(0, 8) == 0)
                 return _cardDatabase3[Random.Range(0, _cardDatabase3.Count)];
-        
-        if (valueController.data.funds > 30 && valueController.data.authority > 30 && valueController.data.believers > 30)
+
+        // TODO: I change the conditions, let it can trigger easy. (by Kalin)
+        if (valueController.data.funds > database3Condition.funds || valueController.data.authority > database3Condition.authority || valueController.data.believers > database3Condition.believers)
             if (Random.Range(0, 8) == 0)
                 return _cardDatabase2[Random.Range(0, _cardDatabase2.Count)];
         

@@ -1157,6 +1157,16 @@ MonoBehaviour:
   titleText: {fileID: 1245768791}
   descriptionText: {fileID: 1714737827}
   image: {fileID: 419141704}
+  database2Condition:
+    funds: 50
+    discoverability: 0
+    authority: 50
+    believers: 50
+  database3Condition:
+    funds: 30
+    discoverability: 0
+    authority: 30
+    believers: 30
 --- !u!114 &1714737827 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1664995676193887645, guid: e4a340017c92d6644a0498f66dd7eedb, type: 3}
