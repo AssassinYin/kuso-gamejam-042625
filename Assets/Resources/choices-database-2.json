@@ -7,7 +7,7 @@
       {
         "text": "公開譴責背叛者",
         "effect": {
-          "authority": 15,
+          "authority": 10,
           "believers": -5,
           "discoverability": 10
         }
@@ -15,7 +15,7 @@
       {
         "text": "秘密警告核心成員",
         "effect": {
-          "authority": 10
+          "authority": 5
         }
       },
       {
@@ -35,7 +35,7 @@
       {
         "text": "立刻開除叛徒",
         "effect": {
-          "authority": 15,
+          "authority": 10,
           "believers": -5
         }
       },
@@ -77,7 +77,7 @@
         "text": "秘密接受，表面平等",
         "effect": {
           "funds": 20,
-          "authority": -5
+          "authority": -10
         }
       }
     ]
@@ -97,7 +97,7 @@
       {
         "text": "譴責媒體扭曲事實",
         "effect": {
-          "authority": 10,
+          "authority": 5,
           "believers": 5,
           "discoverability": 10
         }
@@ -106,7 +106,7 @@
         "text": "立刻低調撤回活動",
         "effect": {
           "discoverability": -10,
-          "authority": -5
+          "authority": -10
         }
       }
     ]

@@ -42,7 +42,7 @@
       {
         "text": "說是競爭教派抹黑",
         "effect": {
-          "authority": 10,
+          "authority": 5,
           "discoverability": 10
         }
       },
@@ -71,7 +71,7 @@
       {
         "text": "只邀內部人士",
         "effect": {
-          "authority": 5,
+          "authority": 3,
           "funds": -5
         }
       },
@@ -106,7 +106,7 @@
       {
         "text": "退回，叫他冷靜",
         "effect": {
-          "authority": 10,
+          "authority": 5,
           "funds": -5
         }
       }
@@ -127,7 +127,7 @@
       {
         "text": "免費給核心成員",
         "effect": {
-          "authority": 5,
+          "authority": 3,
           "funds": -5
         }
       },
@@ -150,7 +150,7 @@
         "effect": {
           "funds": 10,
           "discoverability": 5,
-          "authority": -3
+          "authority": -6
         }
       },
       {
@@ -162,7 +162,7 @@
       {
         "text": "拒絕玷污神名",
         "effect": {
-          "authority": 6,
+          "authority": 5,
           "funds": -3
         }
       }
@@ -176,7 +176,7 @@
       {
         "text": "舉辦火行儀式",
         "effect": {
-          "authority": 6,
+          "authority": 4,
           "discoverability": 10,
           "believers": -8
         }
@@ -212,7 +212,7 @@
       {
         "text": "微笑點頭，不否認",
         "effect": {
-          "authority": 7
+          "authority": 5
         }
       },
       {
@@ -269,7 +269,7 @@
       {
         "text": "自己親自過去拓點",
         "effect": {
-          "authority": 10,
+          "authority": 5,
           "funds": -5,
           "discoverability": 10
         }

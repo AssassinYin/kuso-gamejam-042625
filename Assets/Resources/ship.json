@@ -11,14 +11,6 @@
         }
       },
       {
-        "text": "要求國家資金支持教團",
-        "effect": {
-          "funds": 40,
-          "discoverability": 80,
-          "authority": -20
-        }
-      },
-      {
         "text": "公開支持獻祭建議",
         "effect": {
           "discoverability": 100
@@ -35,14 +27,6 @@
         "text": "命令他們疏散人群",
         "effect": {
           "discoverability": 100
-        }
-      },
-      {
-        "text": "指示信徒優先逃生",
-        "effect": {
-          "believers": 5,
-          "authority": 5,
-          "discoverability": -5
         }
       },
       {
